@@ -1,5 +1,5 @@
 ### Hi there 👋
-![visitors](https://visitor-badge.glitch.me/badge?page_id=Aicirou.Aicirou&left_color=green&right_color=red)
+![visitors](https://visitor-badge.glitch.me/badge?page_id=Aicirou.Aicirou&left_color=maroon&right_color=purple)
 <!-- 
 - 🔭 I’m currently working on ...
 - 🌱 I’m currently learning ...
