@@ -1,6 +1,6 @@
-### Hi there 👋
-[![LinkedIn Link](https://img.shields.io/badge/Connect-Aicirou-blue.svg?logo=linkedin&longCache=true&style=social&label=Connect
-)](https://www.linkedin.com/in/akm808-iitkgp)
+# Hi there! 👋
+[![LinkedIn Link](https://img.shields.io/badge/Connect-Aicirou-blue.svg?logo=linkedin&longCache=true&style=social&label=Connect)](https://www.linkedin.com/in/akm808-iitkgp)
+[![GitHub Follow](https://img.shields.io/badge/Connect-Aicirou-blue.svg?logo=Github&longCache=true&style=social&label=Follow)](https://github.com/Aicirou)
 <!-- 
 - 🔭 I’m currently working on ...
 - 🌱 I’m currently learning ...
