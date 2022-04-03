@@ -1,6 +1,5 @@
-# Hi there! 👋
-[![LinkedIn Link](https://img.shields.io/badge/Connect-Aicirou-blue.svg?logo=linkedin&longCache=true&style=social&label=Connect)](https://www.linkedin.com/in/akm808-iitkgp)
-[![GitHub Follow](https://img.shields.io/badge/Connect-Aicirou-blue.svg?logo=Github&longCache=true&style=social&label=Follow)](https://github.com/Aicirou)
+![Metrics](https://metrics.lecoq.io/Aicirou?template=classic&languages=1&languages.limit=8&languages.threshold=0%25&languages.colors=github&languages.sections=most-used&languages.indepth=false&languages.analysis.timeout=15&languages.categories=markup%2C%20programming&languages.recent.categories=markup%2C%20programming&languages.recent.load=300&languages.recent.days=14&config.timezone=Asia%2FCalcutta)
+
 <!-- 
 - 🔭 I’m currently working on ...
 - 🌱 I’m currently learning ...
