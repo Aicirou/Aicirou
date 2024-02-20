@@ -1,5 +1,7 @@
 ![LoliCount](https://count.getloli.com/get/@Aicirou?theme=rule34)
-<p align="left"><img src="/github-metrics.svg" alt="Metrics" width="400"></p>
+<picture>
+  <img src="/github-metrics.svg" alt="Metrics"  width="400" align="left">
+</picture>
 <!-- 
 - 🔭 I’m currently working on ...
 - 🌱 I’m currently learning ...
