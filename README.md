@@ -1,11 +1,11 @@
-<div align="right">
-  <img src="https://count.getloli.com/get/@Aicirou?theme=rule34" alt="Loli Picture" width="400">
+<div align="center">
+  <img src="https://count.getloli.com/get/@Aicirou?theme=rule34" alt="Loli Picture" width="500">
 </div>
 
 <div align="center">
   
 ```ascii
-              A I C I R O U
+            A I C I R O U
      < code . create . contemplate >
 ```
 
@@ -36,7 +36,7 @@ class Developer
   def initialize
     @languages = [:javascript, :python, :go]
     @state = :learning
-    @mode = :unlimited
+    @mode = :godmode:
   end
 end
 ```
@@ -61,7 +61,7 @@ $ git stats --brief
 ```
 
 <div align="center">
-  <img src="/github-metrics.svg" alt="Metrics" width="400">
+  <img src="/github-metrics.svg" alt="Metrics" width="500">
 </div>
 
 ```shell
