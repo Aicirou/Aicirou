@@ -1,21 +1,9 @@
-![LoliCount](https://count.getloli.com/get/@Aicirou?theme=rule34)
-<picture>
-  <img src="/github-metrics.svg" alt="Metrics"  width="400" align="left">
-</picture>
-<!-- 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
- -->
+<div align="right">
+  <img src="https://count.getloli.com/get/@Aicirou?theme=rule34" alt="Loli Picture" width="400">
+</div>
 
- 
- <div align="center">
-
+<div align="center">
+  
 ```ascii
               A I C I R O U
      < code . create . contemplate >
@@ -27,7 +15,7 @@
 
 ---
 
-<details>
+<details open>
 <summary>$ whoami</summary>
 
 ```yaml
@@ -73,9 +61,7 @@ $ git stats --brief
 ```
 
 <div align="center">
-
-[![Stats](https://github-readme-stats.vercel.app/api?username=Aicirou&hide_title=true&hide_border=true&show_icons=true&include_all_commits=true&count_private=true&line_height=21&theme=dark&bg_color=00000000)](https://github.com/Aicirou/)
-
+  <img src="/github-metrics.svg" alt="Metrics" width="400">
 </div>
 
 ```shell
@@ -84,8 +70,9 @@ $ contact --all
 
 <div align="center">
 
-[![Mail](https://img.shields.io/badge/-Mail-black?style=flat&logo=gmail)](mailto:your.email@domain.com)
+[![Mail](https://img.shields.io/badge/-Mail-black?style=flat&logo=gmail)](mailto:akm808.iitkgp@gmail.com)
 [![Github](https://img.shields.io/badge/-Github-black?style=flat&logo=github)](https://github.com/Aicirou)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-black?style=flat&logo=linkedin)](https://linkedin.com/in/akm808-iitkgp)
 
 </div>
 
