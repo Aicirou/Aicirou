@@ -103,6 +103,6 @@ def main():
     readme_content = generate_readme()
     with open('README.md', 'w') as f:
         f.write(readme_content)
-if name == "main":
+if __name__ == "__main__":
     main()
 
