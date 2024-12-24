@@ -100,10 +100,9 @@ $ echo "Don't follow the path. Create your own."
 </div>'''
     return template
 def main():
-readme_content = generate_readme()
-with open('README.md', 'w') as f:
-f.write(readme_content)
-
+    readme_content = generate_readme()
+    with open('README.md', 'w') as f:
+    f.write(readme_content)
 if name == "main":
 main()
 
