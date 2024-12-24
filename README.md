@@ -5,12 +5,10 @@
 <div align="center">
   
 ```ascii
-A I C I R O U
+ A I C I R O U
      < code . create . contemplate >
 ```
-
 ![Typing SVG](https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&size=12&duration=2000&pause=1000&color=777777&center=true&vCenter=true&random=false&width=435&lines=echo+%22Hello%2C+World%22;%2F%2F+Building+digital+dreams;%23+Exploring+the+unknown;while+(true)+%7B+learn();+%7D)
-
 </div>
 
 ---
@@ -83,5 +81,5 @@ $ echo "Don't follow the path. Create your own."
 ---
 
 <div align="right">
-<sub>Last sync:2024-12-24 07:35:05 IST</sub>
+<sub>Last sync: 2024-12-24 07:43:05 IST</sub>
 </div>
