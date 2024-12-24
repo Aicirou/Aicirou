@@ -18,7 +18,7 @@ def generate_readme():
 <div align="center">
   
 ```ascii
-            A I C I R O U
+A I C I R O U
      < code . create . contemplate >
 ```
 
@@ -33,8 +33,8 @@ def generate_readme():
 
 ```yaml
 name: Aicirou
-location: /earth/somewhere
-timezone: UTC
+location: 0.0.0.0:22
+timezone: IST
 status: debugging_life
 current_task: exploring_possibilities
 ```
@@ -49,7 +49,7 @@ class Developer
   def initialize
     @languages = [:javascript, :python, :go]
     @state = :learning
-    @mode = :godmode:
+    @mode = :godmode
   end
 end
 ```
@@ -96,7 +96,7 @@ $ echo "Don't follow the path. Create your own."
 ---
 
 <div align="right">
-<sub>Last update:{get_current_time_ist()}</sub>
+<sub>Last sync:{get_current_time_ist()}</sub>
 </div>'''
     return template
 def main():
