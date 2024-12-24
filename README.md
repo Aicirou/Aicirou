@@ -69,9 +69,9 @@ $ contact --all
 ```
 
 <div align="center">
-
-[![Mail](https://img.shields.io/badge/-Mail-black?style=flat&logo=gmail)](mailto:akm808.iitkgp@gmail.com)
+  
 [![Github](https://img.shields.io/badge/-Github-black?style=flat&logo=github)](https://github.com/Aicirou)
+[![Mail](https://img.shields.io/badge/-Mail-black?style=flat&logo=gmail)](mailto:akm808.iitkgp@gmail.com)
 [![LinkedIn](https://img.shields.io/badge/-LinkedIn-black?style=flat&logo=linkedin)](https://linkedin.com/in/akm808-iitkgp)
 
 </div>
@@ -83,5 +83,5 @@ $ echo "Don't follow the path. Create your own."
 ---
 
 <div align="right">
-<sub>Last update: 2024-12-23 22:24:02 UTC</sub>
+<sub>Last update:2024-12-24 07:15:58 IST</sub>
 </div>
