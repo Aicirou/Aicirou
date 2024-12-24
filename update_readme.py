@@ -97,8 +97,8 @@ $ echo "Don't follow the path. Create your own."
 
 <div align="right">
 <sub>Last update:{get_current_time_ist()}</sub>
-</div>
-''' return template
+</div>'''
+    return template
 def main():
 readme_content = generate_readme()
 with open('README.md', 'w') as f:
