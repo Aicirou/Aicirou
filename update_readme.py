@@ -104,5 +104,5 @@ def main():
     with open('README.md', 'w') as f:
         f.write(readme_content)
 if name == "main":
-main()
+    main()
 
