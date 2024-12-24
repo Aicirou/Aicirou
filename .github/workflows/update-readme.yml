@@ -2,7 +2,7 @@ name: Update README
 
 on:
   schedule:
-    - cron: '*/30 * * * *'  # Runs every 30 minutes
+    - cron: "*/30 * * * *" # Runs every 30 minutes
   workflow_dispatch:
 
 jobs:
@@ -12,7 +12,11 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
         with:
-          python-version: '3.x'
+          python-version: "3.x"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytz
       - name: Update README
         run: |
           python update_readme.py
