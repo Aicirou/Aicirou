@@ -24,7 +24,7 @@ jobs:
         run: |
           python update_readme.py
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN }}
 
       - name: Commit changes
         run: |
