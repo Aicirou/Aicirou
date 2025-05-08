@@ -16,6 +16,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y docker.io jq
+
       - name: Generate metrics
         uses: lowlighter/metrics@latest
         with:
@@ -45,6 +50,7 @@ jobs:
         run: |
           git config user.name "${{ secrets.GIT_USERNAME }}"
           git config user.email "${{ secrets.GIT_EMAIL }}"
+          git pull --rebase origin main  # Pull latest changes
           git add .
           git diff --cached --quiet || git commit -m "Update metrics"
           git push
