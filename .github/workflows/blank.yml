@@ -79,7 +79,7 @@ jobs:
           git config user.name "${{ secrets.GIT_USERNAME }}"
           git config user.email "${{ secrets.GIT_EMAIL }}"
           git remote set-url origin https://x-access-token:${token}@github.com/${{ github.repository }}.git
-          git pull --rebase origin main
+          git pull --rebase origin "${{ github.ref_name }}"
           git add github-metrics.svg README.md
           git commit -m "Update metrics and sync timestamp"
           git push
