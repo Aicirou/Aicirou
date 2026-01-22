@@ -8,6 +8,8 @@ on:
 jobs:
   generate-metrics:
     runs-on: ubuntu-latest
+    # Skip if triggered by the workflow's own commit
+    if: "!contains(github.event.head_commit.message, 'Update metrics and sync timestamp')"
     environment: 
       name: production
     permissions:
