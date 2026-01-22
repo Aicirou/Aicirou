@@ -1,25 +1,22 @@
-name: Metrics
+name: Generate Metrics & Sync README
 
 on:
   schedule: [{cron: "0 0 * * *"}]  # Daily
   workflow_dispatch:              # Manual trigger
-  push: {branches: ["master", "main"]}  # Optional push trigger
+  push: {branches: ["master", "main"]}
 
 jobs:
-  github-metrics:
+  generate-metrics:
     runs-on: ubuntu-latest
     environment: 
       name: production
     permissions:
       contents: write
+    outputs:
+      metrics_changed: ${{ steps.check_metrics.outputs.metrics_changed }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
-      - name: Install Dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get upgrade -y
 
       - name: Generate metrics
         uses: lowlighter/metrics@latest
@@ -50,29 +47,47 @@ jobs:
         id: check_metrics
         run: |
           git add github-metrics.svg
-          # git diff --cached --quiet returns 0 (success) when there are NO changes
           if git diff --cached --quiet github-metrics.svg; then
             echo "metrics_changed=false" >> $GITHUB_OUTPUT
           else
             echo "metrics_changed=true" >> $GITHUB_OUTPUT
           fi
 
-      - name: Setup Python
+      - name: Upload metrics artifact
         if: steps.check_metrics.outputs.metrics_changed == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: metrics-svg
+          path: github-metrics.svg
+
+  update-readme:
+    needs: generate-metrics
+    if: needs.generate-metrics.outputs.metrics_changed == 'true'
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download metrics artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: metrics-svg
+
+      - name: Setup Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
 
-      - name: Install Python dependencies
-        if: steps.check_metrics.outputs.metrics_changed == 'true'
-        run: pip install pytz
+      - name: Update README timestamp
+        run: |
+          pip install pytz
+          python update_readme.py
 
-      - name: Update README with timestamp
-        if: steps.check_metrics.outputs.metrics_changed == 'true'
-        run: python update_readme.py
-
-      - name: Commit and push if metrics changed
-        if: steps.check_metrics.outputs.metrics_changed == 'true'
+      - name: Commit and push changes
         env:
           token: ${{ secrets.METRICS_TOKEN }}
         run: |
@@ -82,7 +97,7 @@ jobs:
           git pull --rebase origin "${{ github.ref_name }}"
           git add github-metrics.svg README.md
           if git diff --cached --quiet; then
-            echo "No changes to commit. Skipping commit and push."
+            echo "No changes to commit."
           else
             git commit -m "Update metrics and sync timestamp"
             git push
