@@ -46,14 +46,40 @@ jobs:
           plugin_languages_sections: most-used
           plugin_languages_threshold: 0%
 
+      - name: Check if metrics changed
+        id: check_metrics
+        run: |
+          git add github-metrics.svg
+          # git diff --cached --quiet returns 0 (success) when there are NO changes
+          if git diff --cached --quiet github-metrics.svg; then
+            echo "metrics_changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "metrics_changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Setup Python
+        if: steps.check_metrics.outputs.metrics_changed == 'true'
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install Python dependencies
+        if: steps.check_metrics.outputs.metrics_changed == 'true'
+        run: pip install pytz
+
+      - name: Update README with timestamp
+        if: steps.check_metrics.outputs.metrics_changed == 'true'
+        run: python update_readme.py
+
       - name: Commit and push if metrics changed
+        if: steps.check_metrics.outputs.metrics_changed == 'true'
         env:
           token: ${{ secrets.METRICS_TOKEN }}
         run: |
           git config user.name "${{ secrets.GIT_USERNAME }}"
           git config user.email "${{ secrets.GIT_EMAIL }}"
           git remote set-url origin https://x-access-token:${token}@github.com/${{ github.repository }}.git
-          git pull --rebase origin main  # Pull latest changes
-          git add .
-          git diff --cached --quiet || git commit -m "Update metrics"
+          git pull --rebase origin main
+          git add github-metrics.svg README.md
+          git commit -m "Update metrics and sync timestamp"
           git push
