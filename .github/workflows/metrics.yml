@@ -9,7 +9,7 @@ jobs:
   generate-metrics:
     runs-on: ubuntu-latest
     # Skip if triggered by the workflow's own commit
-    if: "!contains(github.event.head_commit.message, 'Update metrics and sync timestamp')"
+    if: "!startsWith(github.event.head_commit.message, 'Update metrics and sync timestamp')"
     environment: 
       name: production
     permissions:
@@ -98,6 +98,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "Update metrics and sync timestamp"
+            TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M:%S UTC")
+            git commit -m "Update metrics and sync timestamp ($TIMESTAMP)"
             git push
           fi
