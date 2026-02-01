@@ -1,40 +1,112 @@
 <div align="center">
-  <img src="https://count.getloli.com/get/@Aicirou?theme=rule34" alt="Loli Picture" width="500">
+  <img src="https://count.getloli.com/get/@Aicirou?theme=rule34" alt="Visitor Count" width="500">
 </div>
 
 <div align="center">
   
-```ascii
- A I C I R O U
-     < code . create . contemplate >
 ```
-![Typing SVG](https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&size=12&duration=2000&pause=1000&color=777777&center=true&vCenter=true&random=false&width=435&lines=echo+%22Hello%2C+World%22;%2F%2F+Building+digital+dreams;%23+Exploring+the+unknown;while+(true)+%7B+learn();+%7D)
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║                                                                               ║
+║     █████╗ ██╗ ██████╗██╗██████╗  ██████╗ ██╗   ██╗                           ║
+║    ██╔══██╗██║██╔════╝██║██╔══██╗██╔═══██╗██║   ██║                           ║
+║    ███████║██║██║     ██║██████╔╝██║   ██║██║   ██║                           ║
+║    ██╔══██║██║██║     ██║██╔══██╗██║   ██║██║   ██║                           ║
+║    ██║  ██║██║╚██████╗██║██║  ██║╚██████╔╝╚██████╔╝                           ║
+║    ╚═╝  ╚═╝╚═╝ ╚═════╝╚═╝╚═╝  ╚═╝ ╚═════╝  ╚═════╝                            ║
+║                                                                               ║
+║                    < code . create . contemplate >                            ║
+║                                                                               ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+```
+
+![Typing SVG](https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&size=14&duration=2000&pause=1000&color=00FF00&center=true&vCenter=true&random=false&width=500&lines=%24+./welcome.sh;Initializing+developer+profile...;%3E+Access+granted.+Welcome%2C+visitor.;while+(true)+%7B+learn();+create();+%7D)
+
+</div>
+
+---
+
+<div align="center">
+
+```
+┌──────────────────────────────────────────────────────────────────────────────┐
+│                           🐍 CONTRIBUTION SNAKE                              │
+└──────────────────────────────────────────────────────────────────────────────┘
+```
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Aicirou/Aicirou/output/github-contribution-grid-snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Aicirou/Aicirou/output/github-contribution-grid-snake.svg">
+  <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/Aicirou/Aicirou/output/github-contribution-grid-snake.svg">
+</picture>
+
 </div>
 
 ---
 
 <details open>
-<summary>$ whoami</summary>
+<summary>💀 $ whoami</summary>
 
 ```yaml
-name: Aicirou
-location: 0.0.0.0:22
-timezone: IST
-status: debugging_life
-current_task: exploring_possibilities
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ SYSTEM PROFILE                                                              │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  name        : Aicirou                                                      │
+│  location    : 0.0.0.0:22                                                   │
+│  timezone    : Asia/Kolkata (IST)                                           │
+│  status      : ████████████████░░░░ 80% [debugging_life]                    │
+│  coffee_level: ██████████░░░░░░░░░░ 50% [need_refill]                       │
+│  mode        : [GODMODE ACTIVATED]                                          │
+│                                                                             │
+│  current_process:                                                           │
+│    └── exploring_possibilities                                              │
+│        └── building_dreams                                                  │
+│            └── breaking_limits                                              │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
 ```
 
 </details>
 
 <details>
-<summary>$ cat skills.log</summary>
+<summary>🔧 $ cat /etc/skills.conf</summary>
 
 ```ruby
+# ═══════════════════════════════════════════════════════════════════════════
+# SKILL CONFIGURATION FILE
+# ═══════════════════════════════════════════════════════════════════════════
+
 class Developer
+  CONSTANTS = {
+    sleep_required: false,
+    coffee_dependency: :critical,
+    stackoverflow_visits_daily: Float::INFINITY
+  }
+  
   def initialize
-    @languages = [:javascript, :python, :go]
-    @state = :learning
-    @mode = :godmode
+    @languages = {
+      primary:   [:python, :javascript, :go],
+      exploring: [:rust, :zig],
+      legacy:    [:java, :cpp]
+    }
+    
+    @tools = {
+      editor:    "neovim/vscode",
+      shell:     "zsh + tmux",
+      os:        "linux > *"
+    }
+    
+    @state = :perpetual_learning
+    @mode  = :godmode
+  end
+  
+  def daily_routine
+    loop do
+      code
+      debug
+      learn
+      repeat
+    end
   end
 end
 ```
@@ -42,12 +114,43 @@ end
 </details>
 
 <details>
-<summary>$ uptime</summary>
+<summary>📊 $ htop --dev-stats</summary>
 
-```shell
-⚡ Commits: Loading...
-🌙 Active: Usually after sunset
-🎯 Focus: Building meaningful things
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ DEVELOPER STATISTICS                                                        │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  ⚡ Commits      : [████████████████████] Loading from API...               │
+│  🌙 Peak Hours   : 22:00 - 04:00 IST                                        │
+│  🎯 Focus        : Building meaningful things                               │
+│  🔥 Current Streak: Still going...                                          │
+│                                                                             │
+│  ┌─ PROCESSES ─────────────────────────────────────────────────────────┐   │
+│  │ PID    PROCESS              CPU%    MEM%    STATUS                  │   │
+│  │ 001    coding.exe           95%     80%     RUNNING                 │   │
+│  │ 002    learning.daemon      100%    50%     ALWAYS_ON               │   │
+│  │ 003    coffee.intake        ∞%      MAX     CRITICAL                │   │
+│  │ 004    sleep.service        5%      10%     SUSPENDED               │   │
+│  └─────────────────────────────────────────────────────────────────────┘   │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+</details>
+
+<details>
+<summary>🎰 $ fortune | cowsay</summary>
+
+```
+ _______________________________________ 
+<  A merge conflict-free day awaits you.  >
+ --------------------------------------- 
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
 ```
 
 </details>
@@ -55,31 +158,50 @@ end
 <br>
 
 ```shell
-$ git stats --brief
+$ neofetch --github
 ```
 
 <div align="center">
   <img src="/github-metrics.svg" alt="Metrics" width="500">
 </div>
 
+<br>
+
 ```shell
-$ contact --all
+$ cat ~/.ssh/socials.pub
 ```
 
 <div align="center">
-  
-[![Github](https://img.shields.io/badge/-Github-black?style=flat&logo=github)](https://github.com/Aicirou)
-[![Mail](https://img.shields.io/badge/-Mail-black?style=flat&logo=gmail)](mailto:akm808.iitkgp@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/-LinkedIn-black?style=flat&logo=linkedin)](https://linkedin.com/in/akm808-iitkgp)
+
+[![Github](https://img.shields.io/badge/-Github-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Aicirou)
+[![Gmail](https://img.shields.io/badge/-Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:akm808.iitkgp@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/akm808-iitkgp)
 
 </div>
 
-```shell
-$ echo "Don't follow the path. Create your own."
-```
-
 ---
 
-<div align="right">
-<sub>Last sync: 2026-01-22 16:44:46 IST</sub>
+<div align="center">
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                                                                             │
+│  "In a world of code, be the exception that doesn't get caught."           │
+│                                                                             │
+│                                            - Anonymous Developer            │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+<sub>
+
+```
+╔══════════════════════════════════════════════════════════════════════════════╗
+║  ⚙ Automated by GitHub Actions | 🕐 Last sync: 2026-02-02 03:11:46 IST            ║
+║  🔄 Profile updates daily | 🐍 Snake eats contributions continuously         ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+```
+
+</sub>
+
 </div>
