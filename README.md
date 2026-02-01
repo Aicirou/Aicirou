@@ -7,13 +7,3 @@
 <div align="center">
   <img src="/github-metrics.svg" alt="Metrics" width="500">
 </div>
-
-```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                                                                             │
-│  "In a world of code, be the exception that doesn't get caught."            │
-│                                                                             │
-│                                            - Anonymous Developer            │
-│                                                                             │
-└─────────────────────────────────────────────────────────────────────────────┘
-```
