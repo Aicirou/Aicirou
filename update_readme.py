@@ -1,6 +1,5 @@
 import datetime
 import pytz
-import os
 import random
 
 def get_current_time_ist():
@@ -20,15 +19,6 @@ def get_random_fortune():
         "The answer is not on Stack Overflow... just kidding, it is.",
     ]
     return random.choice(fortunes)
-
-def get_matrix_rain():
-    """Generate a subtle matrix-style code rain visualization"""
-    chars = "01アイウエオカキクケコサシスセソタチツテト"
-    rain = ""
-    for _ in range(3):
-        line = " ".join(random.choice(chars) for _ in range(35))
-        rain += f"│ {line} │\n"
-    return rain
 
 def generate_readme():
     template = f'''<div align="center">
