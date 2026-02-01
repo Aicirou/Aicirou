@@ -8,8 +8,8 @@ on:
 jobs:
   generate-metrics:
     runs-on: ubuntu-latest
-    # Skip if triggered by the workflow's own commit
-    if: "!startsWith(github.event.head_commit.message, 'Update metrics and sync timestamp')"
+    # Skip if triggered by the workflow's own commit (only applies to push events)
+    if: github.event_name != 'push' || !startsWith(github.event.head_commit.message, 'Update metrics and sync timestamp')
     environment: 
       name: production
     permissions:
@@ -30,6 +30,7 @@ jobs:
           base_hireable: yes
           config_octicon: yes
           config_timezone: Asia/Calcutta
+          config_padding: 0, 8 + 11%
           plugin_gists: yes
           plugin_languages: yes
           plugin_languages_analysis_timeout: 15
