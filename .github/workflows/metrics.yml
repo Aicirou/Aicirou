@@ -1,4 +1,4 @@
-name: Generate Metrics & Sync README
+name: Generate Metrics
 
 on:
   schedule: [{cron: "0 0 * * *"}]  # Daily
@@ -8,14 +8,11 @@ on:
 jobs:
   generate-metrics:
     runs-on: ubuntu-latest
-    # Skip if triggered by the workflow's own commit (only applies to push events)
-    if: github.event_name != 'push' || !startsWith(github.event.head_commit.message, 'Update metrics and sync timestamp')
-    environment: 
+    if: github.event_name != 'push' || !startsWith(github.event.head_commit.message, 'Update metrics')
+    environment:
       name: production
     permissions:
       contents: write
-    outputs:
-      metrics_changed: ${{ steps.check_metrics.outputs.metrics_changed }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -46,60 +43,15 @@ jobs:
           plugin_languages_sections: most-used
           plugin_languages_threshold: 0%
 
-      - name: Check if metrics changed
-        id: check_metrics
-        run: |
-          git add github-metrics.svg
-          if git diff --cached --quiet github-metrics.svg; then
-            echo "metrics_changed=false" >> $GITHUB_OUTPUT
-          else
-            echo "metrics_changed=true" >> $GITHUB_OUTPUT
-          fi
-
-      - name: Upload metrics artifact
-        if: steps.check_metrics.outputs.metrics_changed == 'true'
-        uses: actions/upload-artifact@v4
-        with:
-          name: metrics-svg
-          path: github-metrics.svg
-
-  update-readme:
-    needs: generate-metrics
-    if: needs.generate-metrics.outputs.metrics_changed == 'true'
-    runs-on: ubuntu-latest
-    environment:
-      name: production
-    permissions:
-      contents: write
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Download metrics artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: metrics-svg
-
-      - name: Setup Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.x'
-
-      - name: Update README timestamp
-        run: |
-          pip install pytz
-          python update_readme.py
-
       - name: Commit and push changes
         run: |
           git config user.name "${{ secrets.GIT_USERNAME }}"
           git config user.email "${{ secrets.GIT_EMAIL }}"
           git pull --rebase origin "${{ github.ref_name }}"
-          git add github-metrics.svg README.md
+          git add github-metrics.svg
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
-            TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M:%S UTC")
-            git commit -m "Update metrics and sync timestamp ($TIMESTAMP)"
+            git commit -m "Update metrics"
             git push
           fi
